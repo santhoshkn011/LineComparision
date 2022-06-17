@@ -4,6 +4,9 @@
 
     - Math is a built-in object that has properties and methods for mathematical constants and functions.
       It's not a function object.
+    - Java equals() Method. The equals() method of the Object class compare the equality of two objects.
+      The two objects will be equal if they share the same memory address.
+    - A Wrapper class is a class whose object wraps or contains primitive data types.
 */
 
 package com.LineComparison;
@@ -42,5 +45,19 @@ public class LineComparison {
         //Calculating the length of line2.
         int l2 = (int)Math.sqrt((x4-x3)*2 + (y4-y3)*2); //TypeCasting
         System.out.println("Length of line2: " + l2 + " units");
+
+        //Checking if the length of two lines are equal (Using Java equals Method).
+
+        Integer length1 = l1; //Converting int to Integer (Wrapper Class), So that we can compare using equals method.
+        Integer length2 = l2;
+        
+        boolean check = length1.equals(length2);  //Using Java equals method.
+        
+        if(check == true) {
+            System.out.println("Length of two lines are equal.");
+        }
+        else {
+            System.out.println("Length of two lines are not equal.");
+        }
     }
 }
