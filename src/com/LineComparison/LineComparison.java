@@ -7,6 +7,8 @@
     - Java equals() Method. The equals() method of the Object class compare the equality of two objects.
       The two objects will be equal if they share the same memory address.
     - A Wrapper class is a class whose object wraps or contains primitive data types.
+    - The Java String class compareTo() method compares the given string with the current string lexicographically.
+      It returns a positive number, negative number, or 0.
 */
 
 package com.LineComparison;
@@ -29,7 +31,7 @@ public class LineComparison {
 
         //Calculating the length of line1.
         int l1 = (int)Math.sqrt((x2-x1)*2 + (y2-y1)*2);  //TypeCasting and Java sqrt() method.
-        System.out.println("Length of line1: " + l1 + " units");
+        System.out.println("Length of line1: " + l1 + " units.");
 
         //Variable declarations for line2, Points (x3, y3) and (x3, y3).
         int x3 = 3;
@@ -44,7 +46,7 @@ public class LineComparison {
 
         //Calculating the length of line2.
         int l2 = (int)Math.sqrt((x4-x3)*2 + (y4-y3)*2); //TypeCasting
-        System.out.println("Length of line2: " + l2 + " units");
+        System.out.println("Length of line2: " + l2 + " units.");
 
         //Checking if the length of two lines are equal (Using Java equals Method).
 
@@ -58,6 +60,20 @@ public class LineComparison {
         }
         else {
             System.out.println("Length of two lines are not equal.");
+        }
+
+        //Comparing two lines, if one line is greater than, less than or equal to the other line(Using compareTo Method).
+
+        int comp = length1.compareTo(length2); //Using compareTo method.
+
+        if(comp > 0) {
+            System.out.println("length of line1 is greater than line 2.");
+        }
+        else if(comp < 0) {
+            System.out.println("length of line1 is less than line2.");
+        }
+        else {
+            System.out.println("length of line1 is equal to line 2.");
         }
     }
 }
