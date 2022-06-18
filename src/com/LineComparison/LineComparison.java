@@ -30,7 +30,7 @@ public class LineComparison {
         */
 
         //Calculating the length of line1.
-        int l1 = (int)Math.sqrt((x2-x1)*2 + (y2-y1)*2);  //TypeCasting and Java sqrt() method.
+        int l1 = (int)Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));  //TypeCasting and Java sqrt() method.
         System.out.println("Length of line1: " + l1 + " units.");
 
         //Variable declarations for line2, Points (x3, y3) and (x3, y3).
@@ -45,7 +45,7 @@ public class LineComparison {
         */
 
         //Calculating the length of line2.
-        int l2 = (int)Math.sqrt((x4-x3)*2 + (y4-y3)*2); //TypeCasting
+        int l2 = (int)Math.sqrt((x4-x3)*(x4-x3) + (y4-y3)*(y4-y3)); //TypeCasting
         System.out.println("Length of line2: " + l2 + " units.");
 
         //Checking if the length of two lines are equal (Using Java equals Method).
